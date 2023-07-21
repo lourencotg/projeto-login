@@ -35,6 +35,8 @@ section#login {
     height: 500px;
     border-radius: 20px;
 
+    transition: width 0.3s, height 0.3s;
+    transition-timing-function: ease;
 }
 
 section#login > div#imagem {
@@ -42,10 +44,27 @@ section#login > div#imagem {
     background-size: cover;
     background-position: left bottom;
     height: 200px;
-
+    display: block;
 }
 
 section#login > div#formulario {
     display: block;
     padding: 10px;
+}
+
+@media screen and (min-width: 992px){
+    section#login {
+        width: 990px;
+    }
+
+    section#login > div#imagem {
+        float: left;
+        width: 50%;
+        height: 100%;
+    }
+
+    section#login > div#formulario {
+        float: right;
+        width: 50%;
+    }
 }
